@@ -28,10 +28,9 @@ const [files, setFiles] = useState([]);
   }
     return (
         <>
-            <Navbar />
             <div className='d-flex flex-column align-items-center justify-center'>
                 <h2>Know the sentiment!</h2>
-                <p>Describes the mood and emotion of a all the faces present in the image</p>
+                <p>Describes the mood and emotion of all the faces present in the image</p>
             </div>
             <DragNDrop
                 operationToBePerformed={get_emotions}
