@@ -51,7 +51,7 @@ const Home = () => {
                         <h2>UseCases</h2>
                         <ul>
                             <li>78% accuracy of the model</li>
-                            <li>Trained over 30+ images with 7 emotion types</li>
+                            <li>Trained over 30k+ images with 7 emotion types</li>
                         </ul>
                         <a href='/emotions'>
                             <button className='my-3 btn btn-secondary'>Explore</button>

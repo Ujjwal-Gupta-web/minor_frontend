@@ -56,7 +56,7 @@ const Sentiment = () => {
                         >
                             <div className='my-3 rounded-3'>
                                 <img src={emotion_file}
-                                    style={{ maxHeight: "150px", maxHeight: "200px", borderRadius: "15px 15px 15px 15px" }}
+                                     style={{ maxHeight: "300px", maxHeight: "400px", borderRadius: "15px 15px 15px 15px" }}
                                 ></img></div>
 
                         </div>
