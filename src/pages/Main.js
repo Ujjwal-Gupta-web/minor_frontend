@@ -1,6 +1,5 @@
 import React from 'react'
 import { get_images_with_given_face } from '../controllers/image';
-import Navbar from '../components/Navbar';
 import DragNDrop from '../components/DragNDrop';
 import { toast } from 'react-hot-toast';
 import { useState } from 'react';
@@ -9,6 +8,7 @@ const Main = () => {
     const [img_links, setImgLinks] = useState([]);
     const [files, setFiles] = useState([]);
     const [completed, setcompleted] = useState(false);
+
     const f = async (file) => {
         setcompleted(false);
         toast.success("Image uploaded Success")
@@ -32,6 +32,7 @@ const Main = () => {
             setcompleted(true);
         })
     }
+
     return (
         <>
             <div className='d-flex flex-column align-items-center justify-center'>

@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar from '../components/Navbar';
 import DragNDrop from '../components/DragNDrop';
 import { toast } from 'react-hot-toast';
 import { useState } from 'react';
@@ -7,25 +6,25 @@ import { get_image_with_emotions } from '../controllers/image';
 
 const Sentiment = () => {
 
-const [emotion_file, setEmotionFile] = useState("");
-const [files, setFiles] = useState([]);
+    const [emotion_file, setEmotionFile] = useState("");
+    const [files, setFiles] = useState([]);
 
-  const get_emotions = async (file) => {
-    toast.success("Image uploaded Success")
-    const toastId = toast.loading('Processing Image....please be patient');
-    console.log("IT STARTED")
-    let fd = new FormData();
-    console.log("FILE : ", file);
-    fd.append("file", file)
-    get_image_with_emotions(fd).then((result) => {
-      setEmotionFile(result)
-      console.log(result)
-      toast.success('Operation Completed', {
-        id: toastId,
-      });
-      console.log("IT ENDED")
-    })
-  }
+    const get_emotions = async (file) => {
+        toast.success("Image uploaded Success")
+        const toastId = toast.loading('Processing Image....please be patient');
+        console.log("IT STARTED")
+        let fd = new FormData();
+        console.log("FILE : ", file);
+        fd.append("file", file)
+        get_image_with_emotions(fd).then((result) => {
+            setEmotionFile(result)
+            console.log(result)
+            toast.success('Operation Completed', {
+                id: toastId,
+            });
+            console.log("IT ENDED")
+        })
+    }
     return (
         <>
             <div className='d-flex flex-column align-items-center justify-center'>
@@ -59,7 +58,7 @@ const [files, setFiles] = useState([]);
                                 <img src={emotion_file}
                                     style={{ maxHeight: "150px", maxHeight: "200px", borderRadius: "15px 15px 15px 15px" }}
                                 ></img></div>
-                            
+
                         </div>
                     </>}
             </div>
